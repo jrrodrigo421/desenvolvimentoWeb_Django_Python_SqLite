@@ -4,7 +4,9 @@
 
 
     <h1>Cidades Cadastradas:</h1>
-
+<p>
+<a class="btn btn-prumary" href="{% url 'cadastra-cidade' %}">Cadastrar Nova Cidade</a>
+</p>
     <ul class="list-group">
 
         {% for cidade in cidades %}

@@ -3,5 +3,8 @@
 
     <h1>Detalhe da Cidade:</h1>
     <p>Nome: {{ cidade.nome }} {% if cidade.capital %}<span class="badge bg-success">Capital</span>{% endif %}</p>
+    <div>
+    <a class="btn btn-danger" href="{% url 'cidade-remove' cidade.id %}">Apaga Registro </a>
+    </div>
 
 {% endblock %}
