@@ -5,12 +5,14 @@
 
     <h1>Cidades Cadastradas:</h1>
 <p>
+    {%if request.user.is_authenticated%}
 <a class="btn btn-prumary" href="{% url 'cadastra-cidade' %}">Cadastrar Nova Cidade</a>
+    {% endif %}
 </p>
     <ul class="list-group">
 
         {% for cidade in cidades %}
-        <a class="list-group-item list-group-item-action {% if cidade.capital %} active {% endif %}" href="{% url 'cidades-detalhe' cidade.id%}" >{{ cidade.nome }}</a>
+        <a class="list-group-item list-group-item-action {% if cidade.capital %} active {% endif %}" href="{% url 'cidades-detalhe' cidade.id %}" >{{ cidade.nome }}</a>
         {% endfor %}
 
     </ul>

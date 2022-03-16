@@ -12,7 +12,21 @@
 
 <body>
 <div class="container">
-    <div class="alert alert-danger" role="alert">Bem vindo a pagina do Rodrigo {{ titulo }}</div>
+    <div class="alert alert-danger " role="alert">Bem vindo a pagina do Rodrigo {{ titulo }}</div>
+
+    {% if messages %}
+
+            {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+</div>
+            {% endfor %}
+
+        {% endif %}
 
     {% block conteudo %}
 

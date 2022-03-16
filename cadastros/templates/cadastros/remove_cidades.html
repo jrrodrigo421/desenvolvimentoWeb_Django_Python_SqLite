@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+
+    <h1>Remover Cidade:</h1>
+
+
+    <form method="post">
+        {% csrf_token %}
+        <p>Deseja Remover a Cidade"{{ cidade }}"</p>
+        <input type="submit" class="btn btn-danger" value="Confirma ?">
+    </form>
+
+
+{% endblock %}
